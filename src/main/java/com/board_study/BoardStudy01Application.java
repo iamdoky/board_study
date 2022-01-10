@@ -1,4 +1,4 @@
-package com.board_study.board_study;
+package com.board_study;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
