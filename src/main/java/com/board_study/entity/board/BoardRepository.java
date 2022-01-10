@@ -9,7 +9,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 public interface BoardRepository extends JpaRepository < Board, Long > {
 
-    String UPDATE_BOARD = " UPDATE Board " +
+    String UPDATE_BOARD = " UPDATE board_study.board " +
             "SET TITLE = :#{#boardRequestDto.title}, " +
             "CONTENT = :#{#boardRequestDto.content}, " +
             "UPDATE_TIME = NOW() " +

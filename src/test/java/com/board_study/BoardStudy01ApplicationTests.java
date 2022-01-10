@@ -22,7 +22,7 @@ class BoardStudy01ApplicationTests {
         boardSaveDto.setTitle("제목");
         boardSaveDto.setContent("내용");
         boardSaveDto.setRegisterId("김도희");
-        
+
         Long result = boardService.save(boardSaveDto);
 
         if ( result > 0 ) {
