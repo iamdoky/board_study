@@ -50,7 +50,7 @@ public class BoardController {
 
         try {
             if ( boardRequestDto.getId() != null ) {
-                model.addAttribute("info", boardService.findById(boardRequestDto.getId()));
+                model.addAttribute("info", boardService.findById( boardRequestDto.getId() ));
             }
         } catch ( Exception e ) {
             throw new Exception( e.getMessage() );
@@ -68,7 +68,7 @@ public class BoardController {
                 throw new Exception( "#Exception boardWriteAction!!" );
             }
         } catch ( Exception e ) {
-            throws new Exception( e.getMessage() );
+            throw new Exception( e.getMessage() );
         }
 
         return "redirect:/board/list";

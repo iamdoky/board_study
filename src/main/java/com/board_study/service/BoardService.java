@@ -26,7 +26,7 @@ public class BoardService {
     }
 
     @Transactional( readOnly = true )
-    public HashMap< String, Obejct > findAll ( Integer page, Integer size ) {
+    public HashMap< String, Object > findAll ( Integer page, Integer size ) {
 
         HashMap<String, Object> resultMap = new HashMap<String, Object>();
         Page<Board> list = boardRepository.findAll(PageRequest.of( page, size ));
@@ -58,17 +58,4 @@ public class BoardService {
     public List<BoardResponseDto> findAll() {
         return boardRepository.findAll().stream().map(BoardResponseDto::new).collect(Collectors.toList());
     }
-
-    public BoardResponseDto findById( Long id ) {
-        return new BoardResponseDto(boardRepository.findById(id).get());
-    }
-
-    public int updateBoard( BoardRequestDto boardRequestDto ) {
-        return boardRepository.updateBoard(boardRequestDto);
-    }
-
-    public void deleteById( Long id ) {
-        boardRepository.deleteById(id);
-    }
-
 }
