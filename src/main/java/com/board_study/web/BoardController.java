@@ -45,6 +45,11 @@ public class BoardController {
         return "/board/list";
     }
 
+    @GetMapping("/board/write")
+    public String getBoardWritePage(Model model, BoardRequestDto boardRequestDto ) {
+        return "/board/write";
+    }
+
     @GetMapping("/board/view")
     public String getBoardViewPage(Model model, BoardRequestDto boardRequestDto ) throws Exception {
 

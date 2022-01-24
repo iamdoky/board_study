@@ -10,22 +10,24 @@
     <script src="/js/lib/bootstrap.min.js"></script>
 </head>
 <body>
-    <div class="container">
-        <h1>Board View.</h1>
+<div class="container">
+    <h1>Board Register.</h1>
+    <form action="/board/write/action" method="post">
         <div class="mb-3">
             <label class="form-label">Title</label>
-            <input type="text" class="form-control" name="" th:value="${info.title}">
+            <input type="text" class="form-control" name="title">
         </div>
         <div class="mb-3">
             <label class="form-label">Content.</label>
-            <textarea class="form-control" rows="5" name="" th:text="${info.content}"></textarea>
+            <textarea class="form-control" rows="5" name="content"></textarea>
         </div>
         <div class="mb-3">
             <label class="form-label">Writer.</label>
-            <input type="text" class="form-control" name="" th:value="${info.registerId}">
+            <input type="text" class="form-control" name=registerId"">
         </div>
         <button type="button" class="btn btn-success" onclick="javascript:location.href='/board/list'">Previous</button>
         <button type="submit" class="btn btn-primary">Submit</button>
-    </div>
+    </form>
+</div>
 </body>
 </html>
