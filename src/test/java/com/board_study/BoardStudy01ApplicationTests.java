@@ -19,9 +19,9 @@ class BoardStudy01ApplicationTests {
     void save() {
         BoardRequestDto boardSaveDto = new BoardRequestDto();
         
-        boardSaveDto.setTitle("제목");
-        boardSaveDto.setContent("내용");
-        boardSaveDto.setRegisterId("김도희");
+        boardSaveDto.setTitle("테스트");
+        boardSaveDto.setContent("헬로우");
+        boardSaveDto.setRegisterId("이츠미");
 
         Long result = boardService.save(boardSaveDto);
 
