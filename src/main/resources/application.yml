@@ -4,5 +4,21 @@ spring :
     url: jdbc:mysql://localhost:3306/board_study
     username: root
     password: mariadb
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        format_sql: true
+
 server :
-  port : 8081
+  port : 9090
+
+logging:
+  level:
+    org:
+      hibernate:
+        type:
+          descriptor:
+            sql: trace

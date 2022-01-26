@@ -19,8 +19,7 @@ public interface BoardRepository extends JpaRepository < Board, Long > {
             " SET READ_CNT = READ_CNT +1 " +
             " WHERE ID = :id ";
 
-    static final String DELETE_BOARD = " DELETE FROM board_study.board " +
-            " WHERE ID IN ( :deleteList )";
+    static final String DELETE_BOARD = " DELETE FROM board_study.board WHERE ID IN ( :deleteList )";
 
     @Transactional
     @Modifying

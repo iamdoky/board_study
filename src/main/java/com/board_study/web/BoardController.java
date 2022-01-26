@@ -108,7 +108,7 @@ public class BoardController {
     @PostMapping("/board/delete")
     public String boardDeleteAction ( Model model, @RequestParam() Long[] deleteId ) throws Exception {
         try {
-
+            boardService.deleteAll(deleteId);
         } catch ( Exception e ) {
             throw new Exception( e.getMessage() );
         }

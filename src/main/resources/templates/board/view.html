@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <!-- 부트스트랩 css-->
     <link rel="stylesheet" href="/css/lib/bootstrap.min.css"/>
+    <script src="/js/lib/jquery.min.js"></script>
+    <script src="/js/lib/bootstrap.min.js"></script>
 </head>
 <body>
     <div class="container">
@@ -33,10 +35,9 @@
             </div>
         </form>
     </div>
-    <script src="/js/lib/jquery.min.js"></script>
-    <script src="/js/lib/bootstrap.min.js"></script>
     <script th:inline="javascript">
         function fnViewDelete() {
+            debugger
             if ( confirm( "Do yot want to delete it ?" ) ) {
                 let frm = $("frm");
                 frm.attr( "action", "/board/view/delete" );
