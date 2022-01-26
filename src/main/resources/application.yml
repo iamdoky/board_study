@@ -5,4 +5,4 @@ spring :
     username: root
     password: mariadb
 server :
-  port : 8081
+  port : 9090
